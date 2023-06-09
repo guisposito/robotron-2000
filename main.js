@@ -1,23 +1,17 @@
-const robotron = document.querySelector("#robotron");
-
-const subtrair = document.querySelector("#subtrair");
-const somar = document.querySelector("#somar");
-const braco = document.querySelector("#braco");
-
 const controle = document.querySelectorAll(".controle-ajuste");
+
 controle.forEach((elemento) => {
     elemento.addEventListener("click", (evento) => {
-        manipulaDados(evento.target.textContent);
+        manipulaDados(evento.target.textContent, evento.target.parentNode);
     })
 })
 
-const corpo = document.querySelectorAll(".peca-titulo");
-
-function manipulaDados(operacao){
+function manipulaDados(operacao, controle){
+    const peca = controle.querySelector(".controle-contador");
     if(operacao == "-" ){
-        braco.value = braco.value < 1 ? '0' : braco.value = parseInt(braco.value) -1;
+        peca.value = peca.value < 1 ? '0' : peca.value = parseInt(peca.value) -1;
         
     } else {
-        braco.value = braco.value >= 8 ? '8' : braco.value = parseInt(braco.value) +1;
+        peca.value = peca.value >= 8 ? '8' : peca.value = parseInt(peca.value) +1;
     }
 }
