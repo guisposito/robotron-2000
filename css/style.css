@@ -17,7 +17,7 @@ body {
     font-weight: 300;
 }
 
-body, input {
+body, input, button {
     font-family: 'Teko', sans-serif;
 }
 
@@ -131,7 +131,7 @@ main {
     border-color: var(--main-cinza);
 }
 
-.producao {
+.producao,.botoes button {
     margin-top: 1em;
     font-size: 2em;
     text-transform: uppercase;
@@ -143,7 +143,7 @@ main {
     cursor: pointer;
 }
 
-.producao:hover {
+.producao:hover, button:hover {
     background: var(--main-preto);
     color: var(--main-branco)
 }
@@ -230,4 +230,16 @@ main {
         height: 80vh;
         margin: 10vh auto;
     }
+}
+.alterar {
+    margin: 2px;
+    width: 200px;
+}
+
+.botoes {
+   right: 5%;
+   padding-top: 25px;
+   justify-content: center;
+   display: flex;
+   gap: 15px;
 }
